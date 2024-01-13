@@ -21,11 +21,11 @@ public class MainClass {
 			}
 			while(bu) {
 				System.out.println("========================================================================================");
-				System.out.println("1.Add 						:");
-				System.out.println("2.Search 					:");
-				System.out.println("3.Update    				:");
-				System.out.println("4.Delete					:");
-				System.out.println("5:Exit      				:");
+				System.out.println("1.Add Student 						:");
+				System.out.println("2.Search a Student					:");
+				System.out.println("3.Update the student    				:");
+				System.out.println("4.Delete the student					:");
+				System.out.println("5:Exit from Application     			:");
 				System.out.println("Your Option here 1,2,3,4,5  :");
 				int option = Integer.parseInt(br.readLine());
 				String sdt_id ,sdt_name ,sdt_add ;
