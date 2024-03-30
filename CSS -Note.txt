@@ -1,0 +1,147 @@
+				CSS -Note
+			      =============
+
+ Styles are three types :
+
+1)Inline style.
+2)Embeded Styles.
+3)External Style Sheet.
+
+
+1)Inline Styles :
+-----------------
+->Styles are define for every element using "style" arttribte.
+	<div style = "attribute:value"></div>
+->Faster in rendering
+->Can't reuse the styles
+
+2)Embedded style:
+-----------------
+->Style are defined by using <style> in head or body
+->You can reuse but slow in rendering.
+
+Syntax:
+	<head>
+		<style>
+	
+		</style>
+	</head>
+
+
+FAQ:What is diference between in <head> or <body> ?
+
+Ans-> Styles in head section are intended to load into browser memory first ,from there you can apply to element.  
+
+-> Styles in body section are intended to load and apply to elements directly.
+
+
+FAQ:Can we defines styles in both section ?
+
+Ans->Yes 
+
+
+Note:You can keep styles outside HTML.
+
+ 
+FAQ:What is the MIME type for Styles?
+
+Ans->text/css
+
+Syntax:
+	<style type="text/css"></style>
+
+FAQ:What is the media type for styles?
+
+Ans->screen ,print,speech
+
+syntax:
+	<style type="text/css" media="print">
+	</style>
+
+Ex:
+	
+
+->You can't access embedded styles from another page.
+
+3.External Style Sheets
+------------------------
+[Cascading style sheets]
+
+-> Style are maintained in separate page.
+-> Clean and  separation of markup and styles.
+-> Reusability across page .
+-> Using an External stylesheet will increase the number of request for page.
+->  If number of request is increase the page load time will be increase .
+
+Ex:
+1.Create a new Style sheet .
+	"effects.css"  
+
+	h1{
+		background-color:red;
+		color:white;
+		text-align:center;
+	}
+
+2.Link the stylesheet to any page.
+
+	<link rel="stylesheet" href="./src/styles/effects.css" type="text/css">
+
+
+FAQ:What is Minifiaction?
+
+Ans->It is technique to reduce the file size.
+     It is not ZIP or RAR file.
+
+How to minify the css file ?
+->Simple to go google and search cssminifier.com
+	
+	effect.css --Used for development 	
+	effect.min.css --used for production
+
+Step for mini fiction
+-------------------
+	1.Visit "www.cssminifire.com"
+	2.paste your actual css code
+	3.click minify button
+	4.copy minified code 
+	5.add a new file into project.(effect.min.css)
+	6.link minifide file to your page .
+
+FAQ:Can we edit minified files directly.
+
+Ans->Yes,But you should not distrub the minified logic.
+
+Rules:
+ 
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

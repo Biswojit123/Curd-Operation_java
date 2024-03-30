@@ -1,0 +1,7 @@
+Emp_id	,Emp_name	,Emp_add	,Emp_sal	,Emp_com
+201	Biswojit jena	Tichhini	29030		300
+455	Madhusmita jena	Banapur	2054		45
+203	Pinkun palei	Tichhini	23000		230
+204	Goutam palei	Tichhini	24000		256
+456	Rakesh tarei	tichhini	20000		457
+789	Rasmita jena	tichhini	20678		345

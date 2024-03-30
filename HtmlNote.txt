@@ -1,0 +1,1088 @@
+Inter-Document-links
+====================
+-Navigation from one page to another page.
+-It can also navigate to any specific URL.
+-It can also open any specific application.
+-It also navigate to any specific file.
+
+note:
+-The target file will open in browser or download it depends on plugins.
+- If plugin is not available or supported then file can't open,it will always download.
+
+ex:
+	<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Links
+        </title>
+    </head>
+    <body>
+        <ol>
+            <li>
+                <a href="./JavaPointWeb.html">Education-website</a>
+            </li>
+            <li>
+                <a href="http://www.amazon.in">Online shopping</a>
+            </li>
+            <li>
+                <a href="./Images/NetFlixDemo.png">Movie-site</a>
+            </li>
+        </ol>
+    </body>
+</html>
+
+FAQ: How to design a link that always download even when plugin is available?
+Ans:By using "download" attribute for anchore (<a>) .
+
+syntax:
+<a href="./Images/NetFlixDemo.png" download="Movie">Movie-site</a>
+
+FAQ:How do you link to any application?
+ans:By using "href" with fllowling attributes
+	mailto :email address
+	tel    :phone dial app
+	skype  :skype app
+	javascript:for any another app or function
+syntax:
+	href="mailto:email adress"
+	href=l"tel:8260293404"
+	href="skype:naresh@outook.com"
+	href="javascript:function(){}"
+	
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Links
+        </title>
+    </head>
+    <body>
+        <ol>
+            <li>
+                <a href="./JavaPointWeb.html">Education-website</a>
+            </li>
+            <li>
+                <a href="http://www.amazon.in">Online shopping</a>
+            </li>
+            <li>
+                <a href="./Images/NetFlixDemo.png" download="Movie">Movie-site</a>
+            </li>
+            <li>
+                Contact me<a href="mailto:biswojitjena368@gmail.com">biswojitjena368@gmail.com</a>
+            </li>
+            <li>
+                call <a href="tel:8260293404">8260293404</a>
+            </li>
+        </ol>
+    </body>
+</html>
+
+FAQ:How to open link in a new tab ?
+ans:by using "traget" attribute set to "_blank".
+ 	traget=_blank,_search,_self,_parent . 
+
+FAQ:How to open a link in new window?
+ans:By useing "java-script" window.open() method.
+
+syntax:
+	<a href="javascript:window.open('path','title','width-height')">File name</a>
+
+	ex:
+	  <a href="javascript:window.open('./Images/NetFlixDemo.png','movie','width=500 height=400')" >Movie-site</a>
+
+FAQ:How to open in same window along with existing content?
+ans:By using <iframe> of HTML.that used traget attribute with frame name.
+
+FAQ:What is the iframe?
+ Ans:Iframe is used to embed any external content into page, which can be 
+	image ,video,animation,document ,etc..
+syntax:
+	<iframe src="filepath"></iframe>
+ex:
+	watching:https://www.youtube.com/watch?v=gTK5rNhWJyA
+(here remove watch?v= and replace this place embed)
+	embed:https://www.youtube.com/embed/gTK5rNhWJyA 
+
+ex:
+	<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Links
+        </title>
+        <style>
+           .container {
+                display: grid;
+                grid-template-columns: 3fr 9fr;
+           }
+           iframe {
+                width:100%;
+                height: 500px;
+                border: none;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <ol>
+                    <li>
+                        <a href="./JavaPointWeb.html" target="bodyFrame">Education-website</a>
+                    </li>
+                    <li>
+                        <a href="http://www.amazon.in" target="bodyFrame" >Online shopping</a>
+                    </li>
+                    <li>
+                        <a href="./Images/NetFlixDemo.png" target="bodyFrame">Movie-site</a>
+                    </li>
+                    <li>
+                        Contact me<a href="mailto:biswojitjena368@gmail.com">biswojitjena368@gmail.com</a>
+                    </li>
+                    <li>
+                        call <a href="tel:8260293404">8260293404</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/embed/gTK5rNhWJyA" target="bodyFrame">AWS-Video</a>
+                    </li>
+                </ol>
+            </nav>
+            <main>
+                <iframe name="bodyFrame"></iframe>
+            </main>
+        </div>
+    </body>
+</html>
+
+Summary:
+-open in same window
+-open in new tab
+-open in new window 
+-open in same window along with other content [iframe]
+	 
+2.Tables in HTML
+=================
+-Table are used to store data in rows and columns.
+-tables element are 
+	<table>
+	<caption>
+	<thead>
+	<tbody>
+	<tfoot>
+	<colgroup>
+	<tr>
+	<th>
+	<td>
+Ex:
+	<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table-Demonestrate</title>
+    </head>
+    <body>
+        <table width="600" border="1">
+            <caption>Documatation</caption>
+            <colgroup span="2" style="background-color: yellowgreen;"></colgroup>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Gender</th>
+                    <th>Preview</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dog-1</td>
+                    <td>&#8377;3500</td>
+                    <td>Dog-male</td>
+                    <td>
+                        <img src="./Images/Dog1.jpg" width="50" height="50">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dog-2</td>
+                    <td>&#8377;3600</td>
+                    <td>Female</td>
+                    <td>
+                        <img src="./Images/Dog2.jpg" width="50" height="50">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dog-3</td>
+                    <td>&#8377;3800</td>
+                    <td>Female</td>
+                    <td>
+                        <img src="./Images/Dog3.jpg" width="50" height="50">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dog-4</td>
+                    <td>&#8377;4800</td>
+                    <td>male</td>
+                    <td>
+                        <img src="./Images/Dog4.jpg" width="50" height="50">
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&copy;Copy wright 2022</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
+
+
+Tables Attributes:
+=================
+1.Boder,Frame and rules
+	 
+	Frame : It is uesd for table, you can apply values
+		
+		box|rhs|above|below|void|lhs
+		
+		Syntax:
+		<table frame="box|lhs|rhs|above|below|void">
+	
+	Rules :It is used for rows,columns and groups
+
+		rows|cols|groups|none|all
+		<table frame="box" rules="groups|all|cols||rows|none">	
+
+	Border :It is used for cell . It can have values 0 or 1.
+		
+		0 = false[no boder]
+		1 = true [boder]
+
+	note:Boder can't dispaly if rules are defined. It is mandatory to
+	-----
+		remove rules attribute from table.
+		
+		<table boder="1" rules="none" > //invalid
+		<table boder="1" >//valid
+
+2.Cellspacing and Cellpadding
+	
+	cellspacing :it sets the space between the cells.
+	cellpadding :it sets space between border and content.
+	
+syntax:
+	<table cellspacing="10" cellpadding="10" boder ="1" frame="void">
+
+3.bgcolor and background
+
+	bgcolor :sets background color for table,group row or cell.
+	
+	<table bgcolor="yellow">
+	<thead bgcolor="red">
+	<tr bgcolor="green">
+	<td bgcolor="orange">
+
+	background :sets background image for table , group,row or cell.
+	
+	<table background="imagepath">
+	<thead background="imagepath">
+	<tr background="imagepath">
+	<td background="imagepath">
+
+4.align and valign
+	
+align :horizontally left,center,right or justify
+valign :vertically top,center,bottom.
+	
+	align : it is defined for table,tr,group,cell.
+	valign :it is defined for tr,group,cell.
+syntx:
+	<table align="center">
+	<tr align="center" valign="top">
+	<td align ="right">
+5.width and height
+	width :It sets width for table and cell.
+	height :It set height for table,group,row,cell
+Syntax:
+	<table width="300">
+	<th width="100">
+	<td width="200">
+	
+	<tr height="100">
+	<td height="100">
+6.colspan and rowspan
+
+	colspan :It is used to merge multiple columns into single cell.	 
+	rowspan :It is used to merge multiple rows into single cell.
+
+Nested Tables
+=============
+->We can define a table inside a another table.
+	
+	<td>
+		<table>
+		</table>
+	</td>
+
+ 
+				Forms in HTML
+				==============
+
+->It ia container that provides various controls to intract with application and data.
+
+->From provides an UI for interactions like view , edit , update ,insert and delete. 
+
+->Forms comprises of various types of controls like
+	buttons
+	textbox
+	checkbox
+	radio
+	listbox etc..
+
+
+
+Form Container
+==============
+	-> Form container is designed by using
+		<form>
+			
+		</form>
+
+Form Attributes
+---------------
+	->Form comprises of various Attributes
+	1)name
+	2)id
+	3)class
+
+	<form id="frmRegister" name="RegisterForm" class="formRegister">
+	</form>
+
+	4)method :It defines the action perfromed by form.
+		HTML forms can be designed for 2 methods
+			a)GET
+			b)POST
+		GET is used to fetch information from server
+		POST is used to submit the information to server.
+
+	Note: The Default method for form is GET.
+
+FAQ:Can we submit information on GET?
+Ans:Yes .But not Recommended.
+
+GET vs POST
+-----------
+GET :
+----
+Because when we submit the data using GET method the fllowing problem are associate.
+->Get submit the data as querstring .
+->Data will appended into URL.
+->Any one can view your data
+->it is not safe
+->Easy to hack 
+->it is stored in browser logs .
+->it can be book marked
+->You can not submit complex data . like binary
+->limit for data 2048 chars
+Advantage of GET :->You can cache the data[buffer]
+		->You can view data faster , it save rounds trip.   
+
+Post :
+-----
+->Data will be submited into form body
+->it is not in URL
+->safer that get
+->hard to hack
+->not stored in browser logs
+->you can't bookmark
+->no limiti
+->complex data
+->can't be cached
+
+	5)Action :Indicate the target location where the data need to be 		  submitted.	
+	Syntax:
+		<form method="Post" action="serverPage">
+	ex:
+		<form method="post" action="page.jsp">
+	
+	6)novalidate :it is used to by pass the default HTML validation.
+	
+	Syntax :
+		<form method="post" novalidate>
+		</form>
+
+Form Elements
+-------------
+
+->A comparises of various element , which are designed by useing
+	<input>
+	<select>
+	<option>
+	<optgroup>
+	<meter>
+	<progress>
+	<textarea> etc..
+
+
+Textbox:
+-------
+	->Textbox used fro string input
+	->String is literal of group of character,A-Z,0-9,Symobls.
+	->textbox configure by using
+		<input type="text">
+	note:<input> element allows to input any value .If you want to restrict to any specific data type like number,email,string etc. then 
+you have to use the attribute "type".
+
+Textbox Attribute :
+-------------------
+	1.id
+	2.name
+	3.class
+	
+	note:Every element in from must have a "name" defined.
+	     if name is not defined then from can't submit its value.
+
+	4.value :the defult value to display in textbox.
+	5.readonly : it is not allowed to change the value but it submit 	the value. 
+	6.disabled:it will not allowed to change and submit the value.
+	
+	Syntax:
+		<input type="text" name="User name" disabled value="David"> 
+	 
+
+	7.size :it specifise the width of texbox[20 defualt].
+	
+	syntax:
+		<input type="textbox" name="otp" size="4" >
+
+	8.Autofocus: it sets the focus to the control autometically.
+	
+	syntax:
+		<input type="text" autofocus name="otp" size="4">
+
+	9.placeholder:it defines the watermark text.
+	
+	syntax:
+		<intput type="text" name="Username" placeholder="First 			Name" >
+
+	10.minlength :it validates the minimum number of characture .
+	11.maxlength :it validates the maximum nuber of characture .
+		      it willnot allow exceeding chars.
+
+	Syntax:
+		<input type="text" name="UserName" minlength="4" 			maxlength="15" >
+	
+	12.required :It is not allow to submit empty.
+		     it is used to define mandatory fields.
+	
+	syntax:
+		<input type="text" name="UserName" required >
+
+	13.list :it uses a data list.
+		->data list ia used as auto completed text.
+	note:Data list is designed by using <datalist>
+	     Data list contains options designed by using <option> 
+
+	Syntax:
+		<input type="text" name="Search" list="term" size="40" >
+		<datalist id="term">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</datalist>
+	
+	14.pattern
+	----------
+	->It is used to restrict the format of value enterned into textbox.
+	->pattern uses aregular Expression.
+	
+	<input type="text" pattern="regExp" >
+	
+	Regular expression is bulit by using meta chars and quantifiers.
+	
+ Meta Characters :
+
+	? --> Zero or one occurance of character
+
+
+
+ 	Check-Box
+------------------------
+
+->Every thing similar to radio button.
+->It allow to check and uncheck without mutex.
+->
+
+
+Syntax:
+		<input type="checkbox" >
+
+Attribute:
+-name
+-value
+-checked
+
+Syntax : 
+	<input type="checkbox" name="course" value="java">
+
+
+FAQ:How to dispaly checkbox list ?
+----
+ 
+Ans:By using CSS overflow Attribute
+
+Ex:
+		
+	<!DOCTYPE html>
+
+<html lang="en-IN">
+    <head>
+        <title>
+            Check-Demo
+        </title>
+        <style>
+            ol {
+                list-style: none;
+                height: 100px;
+                border: 2px solid black;
+                width: 200px;
+                overflow: auto;
+            }
+            button {
+                background-color: crimson;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <form>
+            <h1>Course-Select</h1>
+            <ol>
+                <li>
+                    <input type="checkbox" name="course" value="Java">Java
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Oracle" >Oracle
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Spring-Boot">Spring-Boot
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Adv.Java">Advance-Java
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Java">Java
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Oracle" >Oracle
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Spring-Boot">Spring-Boot
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Adv.Java">Advance-Java
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Java">Java
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Oracle" >Oracle
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Spring-Boot">Spring-Boot
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Adv.Java">Advance- Java
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Java">Java
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Oracle" >Oracle
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Spring-Boot">Spring-Boot
+                </li>
+                <li>
+                    <input type="checkbox" name="course" value="Adv.Java">Advance-Java
+                </li>
+            </ol>
+            <button>
+                Submit
+            </button>
+        </form>
+    </body>
+</html>
+
+
+FAQ: How to define the effects based on checked property ?
+----
+
+Ans:>By using CSS "checked" class you can control effects.
+
+Ex:
+
+
+<!DOCTYPE html>
+
+<html lang="en-IN">
+
+    <head>
+        <title>
+            Check-Box
+        </title>
+        <style>
+            .container {
+                overflow: auto;
+                width: 200px;
+                height: 100px;
+                border: 2px solid red;
+                text-align: justify;
+            }
+            .term+span {
+                color: red;
+            }
+
+            .term:checked+span {
+                color: green;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <form>
+            <h3>Term-condition</h3>
+            <div class="container">
+                A paragraph has three major parts- 1. Topic sentence 2. Supporting sentences 3. Concluding sentence 1. Topic Sentence A topic sentence is a precise statement that reflects the main idea of the paragraph. It should be carefully written as it will show the reader what you are going to talk about. Words chosen for this 
+            </div>
+            <p>
+                <input type="checkbox" class="term" ><span>I Accept</span>
+            </p>
+        </form>
+    </body>
+
+</html>
+
+
+
+		DropdownList
+	============================
+->Allows user to select any one option from a group of choices.
+
+->Dropdown is designed by using 
+	<select>
+->Option in dropdown are designed by using
+	<option>
+->You can group options by using
+	<optgroup>
+
+ex:
+		<!DOCTYPE html>
+<html lang="en-IN">
+
+    <head>
+        <titl>
+            DropDownList
+        </titl>
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <from>
+            <h1>
+                Select Catogories
+            </h1>
+            <select>
+                <option>select catogory</option>
+                <optgroup label="Fashian">
+                    <option>Casual-Shooes</option>
+                    <option>T-shirt</option>
+                    <option>Hand-bag</option>
+                    <option>Nekles</option>
+                </optgroup>
+                <optgroup label="Electronic">
+                    <option>Redmi-mobile</option>
+                    <option>Watch</option>
+                    <option>Smart-tv</option>
+                </optgroup>
+            </select>
+        </from>
+    </body>
+
+</html>
+
+
+
+			ListBox
+==================================================
+->Every things same like dropdown.
+->It allows to select one or multiple .
+->We can change dropdrwon in list box.
+		a>size
+		b>multiple
+
+ex:
+		<!DOCTYPE html>
+<html lang="en-IN">
+
+    <head>
+        <titl>
+            DropDownList
+        </titl>
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <from>
+            <h1>
+                Select Catogories
+            </h1>
+            <select size="4" multiple>
+                <option>select catogory</option>
+                <optgroup label="Fashian">
+                    <option>Casual-Shooes</option>
+                    <option>T-shirt</option>
+                    <option>Hand-bag</option>
+                    <option>Nekles</option>
+                </optgroup>
+                <optgroup label="Electronic">
+                    <option>Redmi-mobile</option>
+                    <option>Watch</option>
+                    <option>Smart-tv</option>
+                </optgroup>
+            </select>
+        </from>
+    </body>
+
+</html>
+
+				Meter
+			====================
+->It is used to grade meter .
+->it is defined by using 
+		<meter>
+
+Attribute :
+		-min
+		-max
+		-low
+		-high
+
+syntax :
+		<meter min="" max="" value="" low="" high=""></meter>
+
+
+
+			Progress
+		  =====================
+->It is used to dispaly status of task perfromed in page.
+->Like downloding , uploading ,coying etc..
+
+Syntax:
+	
+	<progress min="1" max="100" value="50" ></progress>
+
+
+
+			TextArea
+		=========================
+->It is used to displaying multipletext.
+->it is RC data types.
+
+
+Syntax:
+		
+		<textarea>
+			
+			
+		</textarea>
+
+Attribute:
+		a)rows
+		b)cols
+		c)disable
+		d)readonly
+		c)required
+		
+ex:
+	
+	
+	<from>
+            <fieldset>
+                <legend>Type the Comment</legend>
+                <textarea cols="8" rows="8" name="text-line">
+
+                </textarea>
+                <button>
+                    Submit-Text
+                </button>
+            </fieldset>
+        </from>
+
+
+
+			Buttons in HTML
+		================================
+
+->Buttons are used to confirm user action.
+->it includes 
+		
+		Record Actions
+		-Insert ,Update,Delete,View,Edit
+		Record Navigations
+		-Prev,Netx,First,Last
+		Miscellaneous Actions
+		-Print,Save,Open,Close,Register,Login etc..
+
+->Buttons are classified into 2 types
+
+		a)Generic Buttons
+		b)Non-Generic Buttons
+
+->Generic buttons have pre-defined functionality
+		
+		HTML 4
+		<input type="submit">		:it can submit form.
+		<input type="reset">		:It will reset form. 
+Ex: <form>
+        <fieldset>
+            <legend>Submit from</legend>
+            <input type="text" value="User" name="username">
+            <input type="submit" value="Register" name="username">
+            <input type="reset" value="Cancel" name="username">
+        </fieldset>
+    </form>
+
+
+Ex:
+
+		<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Submit from</legend>
+            <input type="text" value="User" name="username">
+            <button type="submit" value="Register"><span class="bi bi-person-fill"></span>Register</button>
+            <button type="reset" value="Cancel"><img src="./Images/giphy.gif" width="12" height="12">Cancel</button>
+        </fieldset>
+    </form>
+</body>
+</html>
+
+
+->Non-generic button are the buttons without any functionality.
+
+	In-HTML-4
+	<input type="Button" value="print" >
+	
+	In-HTML - 5
+	<button type="submit"><span class="bi bi-printer-fill">Print</button>
+
+
+Ex:
+	
+	<form>
+        <fieldset>
+            <legend>Submit from</legend>
+            <input type="text" value="User" name="username">
+            <button type="submit" value="Register"><span class="bi bi-person-fill"></span>Register</button>
+            <button type="reset" value="Cancel"><img src="./Images/giphy.gif" width="12" height="12">Cancel</button>
+            <button type="submit" ><span  class="bi bi-printer-fill"></span>Print</button>
+        </fieldset>
+    </form>
+
+
+ 
+	Set Container
+=========================
+<body class="container-fluid">
+
+Bootstrap Form Classess:
+
+.form-control   :texbox,password,number,email,date,url,textarea
+
+
+.form-select    :dropdown 
+
+
+.btn            :buttons
+.btn-{color}    :primary,success,danger,warning etc.
+			dark,light,info
+
+.input-group    :it is used to display all in inline.
+
+.input-group-text :it is used in prefix and suffix.
+
+.input-group-lg   :large
+
+.input-group-sm   :small
+
+
+
+Ex:
+		
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        #box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+        }
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+   <div id="box">
+        <div>
+            <div class="input-group">
+                <select class="input-text-group">
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Footware</option>
+                    <option>Fashian</option>
+                    <option>Grocery</option>
+                </select>
+                <input type="text" name="serach bar" class="form-control" placeholder="amazone search">
+                <button type="submit" class="btn btn-warning">
+                    <span class="bi bi-search"></span>
+                </button>
+            </div>
+            <br><br>
+            <div class="input-group input-group-lg">
+                <input type="text" name="netfix" class="form-control" placeholder="Your email address" >
+                <button type="submit" class="btn btn-danger" >
+                    <span class="bi bi-chevron-right"></span>
+                    Get started
+                </button>
+            </div>
+        </div>
+   </div>
+</body>
+</html>
+
+
+			Traditional Form Elements
+	------------------------------------------------------
+
+1.Container
+	
+	<div>
+2.Lable
+	<lable>
+
+   
+3.Elements 
+	
+	Textbox,CheckBox,Button,Radio
+
+
+mt-1 to 4 		margin-top
+mb			bottom
+ms			left
+me			right
+
+
+form-lable 		lable
+
+
+			Multi-Media
+-----------------------------------------------------------
+
+->Embed audio and video content in page .
+
+->Embed animation to page.
+
+1.Marquee : it is used for displaying scrolling and sliding content on 		    page .
+		
+	<marquee>
+		your content
+	</marquee>
+
+Attributes :
+------------
+	-scrollamount :it controls the speed 1 to 100.
+
+	-direction :it controls scrolling direction left.right,up,down.
+
+	-behavior :it set sliding alternate .
+Syntax:
+	<marquee behavior="alternate" >
+	<marquee direction="right">
+
+
+note :You can use only direction or behavior for marquee.
+	Both are not allowed . only one can be defined.
+	
+	-loop :it specifise the number of times to loop marquee   
+		
+	-width :content width
+	
+	-height :Content height
+	
+	-bgcolor : background color
+
+Ex:
+	
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+    <style>
+        body {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+   <marquee scrollamount="20" direction="right" loop="3" height="50%" width="50%">
+        <h1>
+            Sales start the 50% off for mobile
+             <img src="./Images/mobile1.jpg" width="50" height="50"> 
+        </h1>
+    </marquee>
+    <marquee scrollamount="20" direction="left" loop="3" height="50%" width="50%" >
+        <h1>
+            Sales End -remaning time 34:23:02
+        </h1>
+    </marquee>
+
+</body>
+</html>
+	
+
+
+
+
+
+
+ 
